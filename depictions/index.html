@@ -1,161 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="has-subpixel" lang="en">
+
 <head>
-	<title>Cydia Tweak</title>
+	<title>7-Heaven</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/CydiaIcon.png">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link rel="stylesheet" href="style.css">-->
+	<link rel="stylesheet" href="ios7.min.css">
+	<link rel="stylesheet" href="common.css">
 
 	<style>
-		body {
-			background-color: #efeff4;
+		li:after {
+			left: -15px;
+			width: calc(100% + 15px);
 		}
-		h1, .package-desc {
-			margin-left: 7px;
+
+		.disable-selection {
+			-moz-user-select: none;
+			/* Firefox */
+			-ms-user-select: none;
+			/* Internet Explorer */
+			-khtml-user-select: none;
+			/* KHTML browsers (e.g. Konqueror) */
+			-webkit-user-select: none;
+			/* Chrome, Safari, and Opera */
+			-webkit-touch-callout: none;
+			/* Disable Android and iOS callouts*/
 		}
-		.badge-label {
-			border-radius:1em;
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.querystring.js"></script>
+	<script type="text/javascript" src="js/data-loader-engine.js"></script>
+	<script type="text/javascript" src="js/ios_version_check.js"></script>
+	<script type="text/javascript" src="ios7.min.js"></script>
+	<style>
+		@media (max-width: 767px) {
+			body {
+				background: #efeff4 !important;
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				box-sizing: border-box
+			}
 		}
-		.panel, .list-group-item, .alert {
-		 	border-radius: 0 !important;
+
+		.jumbotron-bg {
+			background: green
 		}
-		.list-group-item:last-child {
-			margin-bottom: -1px;
+	</style>
+	<style>
+		.package-info dl {
+			font-size: .85em;
+			margin: 0
 		}
-		.subshots {
-			text-align: center;
+
+		.package-info dl dt {
+			float: left;
+			clear: left;
+			width: 100px;
+			text-align: right;
+			color: #6d6d72;
+			margin-right: 8px
 		}
-		.subshots:nth-child(1) {
-			margin-bottom: 10px;
-		}
-		.screenshots img {
-			border: thin solid #BEB6D8;
-		}
-		.package-buttons {
-			margin-top: 10px;
-		}
-		.repo-buttons {
-			margin-top: 20px;
-		}
-		a:link, a:visited, a:hover {
-			text-decoration: none;
-		}
-		.package-error {
-			display: none;
+
+		.package-info dl dd {
+			margin-left: 108px
 		}
 	</style>
 </head>
-<body>
-	<div class="container">
-		<div class="package row">
-			<div class="header">
-				<h1 class="package-name"></h1>
-			</div>
+
+<body class="disable-selection">
+	<main id="content" role="main">
+
+		<div id="packageInformation">
+			<article id="packageHeader" style="">
+				<section>
+					<ul>
+						<li>
+							<strong id="packageName" style="font-size:1.3em;">Tweak Name</strong>
+							<br>
+							<span id="packageAuthor"></span>
+						</li>
+					</ul>
+				</section>
+			</article>
+
+			<article id="compatCheckContainer" style="display: none;">
+				<header>
+					<h2 id="compatibilityCheckLabel">Compatibility</h2>
+				</header>
+				<section class="content" id="compatibilityCheck">
+					<ul>
+						<li id="compatibilityCheckText"></li>
+					</ul>
+				</section>
+			</article>
+
+			<article>
+				<!-- header><h2 id="compatibilityCheckLabel">Zebra</h2></header -->
+				<section class="content" id="compatibilityCheck">
+					<ul>
+						<li class="arrow"><a class="link-item list-group-item" role="button"
+								href="cydia://url/https://cydia.saurik.com/api/share#?source=https://xtm3x.github.io/repo/&amp;package=xyz.willy.zebra">Get
+								Zebra</a></li>
+					</ul>
+				</section>
+			</article>
+
+			<article>
+				<header>
+					<h2>DESCRIPTION</h2>
+				</header>
+				<ul id="descriptionList" class="list-group">
+					<li class="list-group-item"></li>
+					<li class="arrow"><a id="screenshots" href="" role="button">Screenshots</a>
+					</li>
+				</ul>
+			</article>
+
+			<article>
+				<label>
+					<h2>IN THIS VERSION (<span id="versionBadge" class="badge"></span>)</h2>
+				</label>
+				<ul id="changesList" class="list-group">
+					<li class="list-group-item">
+						<p></p>
+					</li>
+					<li class="arrow"><a id="changelog" class="link-item list-group-item"
+							href="" role="button">Full Changelog</a></li>
+				</ul>
+			</article>
+
+
+
+			<article class="package-info" id="metadataContainer">
+				<label>
+					<h2>Metadata</h2>
+				</label>
+				<ul class="list-group">
+					<li id="metadata">
+						<dl>
+							<dt>License</dt>
+							<dd id="license">Open Source, Fork</dd>
+							<dt id="sizeLabel">Size</dt>
+							<dd id="size">8 KB</dd>
+						</dl>
+					</li>
+				</ul>
+			</article>
+
+			<article id="externalLinksContainer">
+				<label>
+					<h2>LINKS</h2>
+				</label>
+				<ul id="externalLinksList" class="list-group">
+					<li class="arrow"><a href="https://www.reddit.com/r/jailbreak" role="button"><span
+								class="fa fa-reddit"></span>/r/jailbreak</a></li>
+					<!--li class="arrow"><a href="https://github.com/Samplasion/7heaven" role="button"><span
+								class="fa fa-github"></span>Source Code</a></li-->
+				</ul>
+			</article>
+
 		</div>
 
-		<div class="row alert alert-danger package-error"></div>
-		
-		<div class="package-info">
-			<div class="package-info row">
-				<p class="package-desc"></p>
-			</div>
-
-			<i><p class="package-author"></p></i>
-
-			<div class="row panel panel-default">
-			  <div class="panel-heading">Changelog <div class="label label-primary badge-label latest-version"></div></div>
-			  <div class="panel-body changelog-list">
-			  </div>
-			</div>
-
-			<br>
-
-			<div class="row screenshots">
-			</div>
-
-			<div class="row package-buttons">
-				<ul class="list-group">
-				  <a href="screenshots" class="screenshots-link"><li class="list-group-item"><span class="glyphicon glyphicon-picture"></span> Screenshots</li></a>
-				  <a href="changelog" class="changelog-link"><li class="list-group-item"><span class="glyphicon glyphicon-tasks"></span> Full Changelog</li></a>
+		<div id="packageError" style="display:none">
+			<article>
+				<ul>
+					<li>It seems like the package you are trying to view links to a broken depiction.</li>
 				</ul>
-			</div>
-
-			<div class="row repo-buttons">
-				<ul class="list-group">
-				  <a href="https://github.com/Jake0oo0/boomerang" target="_blank"><li class="list-group-item"><span class="glyphicon glyphicon-wrench"></span> Boomerang Repository</li></a>
-				  <a href="https://twitter.com/itsjake88" target="_blank"><li class="list-group-item"><span class="glyphicon glyphicon-heart"></span> Follow Boomerang Dev</li></a>
-				</ul>
-			</div>
+			</article>
 		</div>
 
-	</div>
+		<!--div id="contactInfo" style="display: none;">
+			<article>
+				<label>
+					<h2>CONTACT</h2>
+				</label>
+				<ul class="list-group" id="repoFooterLinks">
+				</ul>
+			</article>
+		</div-->
+	</main>
+
 	<script>
-	$(document).ready(function() {
-		var dPackage = getParameterByName("p");
+		$(document).ready(function () {
+			var dPackage = getParameterByName("p");
 
-		if (!dPackage) {
-			$(".package-error").text("This package doesn't seem to exist!").css("display", "block");
-			$(".package-info").css("display", "none");
-			$(".package-name").text("Not found");
-			return;
-		}
+			if (!dPackage) {
+				$("#packageError").css("display", "block");
+				$("#packageInformation").css("display", "none");
+				$("#packageName").text("Not found");
+				return;
+			}
 
-		$.getJSON("/repo/pkgs/" + dPackage + ".json", function(data) {
-			document.title = data.name + " by " + data.author;
-		  $(".package-name").text(data.name);
-		  $(".package-desc").html(data.description);
-		  $(".latest-version").text(data.version + " (latest)");
-		  $(".package-author").text("by " + data.author);
-		  var cList = $(".changelog-list");
-		  var changes = data.changelog[data.version];
-		  for (var c in changes) {
-		  	var change = changes[c];
-		  	cList.append("<li>" + change + "</li>")
-		  }
+			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
+					document.title = data.name + " by " + data.author;
+					$("#packageName").text(data.name);
+					$("#descriptionList .list-group-item").html(data.description);
+					$("#versionBadge").text(data.version);
+					$("#packageAuthor").text("brought to you by " + data.author);
+					$("#license").text(data.license || "Closed Source");
+					$("#size").text(data.size || "Unknown");
+					var cList = $(".changelog-list");
+					var changes = data.changelog[data.version];
+					for (var c in changes) {
+						var change = changes[c];
+						cList.append("<li>" + change + "</li>")
+					}
 
-		  var count = 0;
-		  var screenshots = data.screenshots;
-		  var sKeys = Object.keys(screenshots);
-		  for (var s in sKeys) {
-		  	var screenshot = sKeys[s];
+					$("#changelog").attr("href", "changelog?p=" + dPackage);
+					$("#screenshots").attr("href", "screenshots?p=" + dPackage);
+				})
+				.fail(function () {
+					$("#packageError").css("display", "block");
+					$("#packageError article ul li").text("An error occurred while retrieving package info!")
+					$("#packageInformation").css("display", "none");
+					$("#packageName").text("Not found");
+					return;
+				});
 
-		  	if (count % 2 === 0) {
-		  		$(".screenshots").append("<div class=\"subshots col-xs-12\"></div>");
-		  	}
-
-		  	$(".screenshots .subshots:last-child").append("<div class=\"col-xs-6\"><img class=\"img-responsive\" src=\"/images/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\"></div>");
-		  	count += 1;
-		  }
-
-		  $(".changelog-link").attr("href", "changelog?p=" + dPackage);
-		  $(".screenshots-link").attr("href", "screenshots?p=" + dPackage);
-
-		  var links = data.links;
-		  var lKeys = Object.keys(links);
-		  for (var l in lKeys) {
-		  	var link = lKeys[l];
-				var wrap = $("<a href=\"" + links[link] + "\" target=\"_blank\"><li class=\"list-group-item\"></li></a>");
-				wrap.find(".list-group-item").append($.parseHTML(link));
-				$(".package-buttons .list-group").append(wrap);
-		  }
-		})
-		.fail(function() {
-			$(".package-error").text("An error occurred while retrieving package info!").css("display", "block");
-			$(".package-info").css("display", "none");
-			$(".package-name").text("Repository Error");
-			return;
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+				return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
 		});
-
-		function getParameterByName(name) {
-		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-		        results = regex.exec(location.search);
-		    return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
-		}
-	});
 	</script>
+
 </body>
+
 </html>
