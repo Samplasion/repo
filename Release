@@ -1,8 +1,8 @@
-Origin: Jake's Boomerang Repo
-Label: Jake's Boomerang Repo
+Origin: Samplasion's Repo
+Label: Samplasion's Repo
 Suite: stable
 Version: 1.0
-Codename: ios
+Codename: cookie
 Architectures: iphoneos-arm
 Components: main
-Description: Jake's Boomerang Repository
+Description: Samplasion's repository for beta stuff
