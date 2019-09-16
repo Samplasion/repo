@@ -193,11 +193,12 @@
 			}
 
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
-					document.title = data.name + " by " + data.author;
-
-					var version  = tabs[0].latest[5];
-					var author   = tabs[0].latest[8];
+					var name     = tabs[0].views[0].title;
+					var version  = tabs[0].latest[5].text;
+					var author   = tabs[0].latest[8].text;
 					var versions = organizeVersions(tabs[1].views);
+
+					document.title = data.name + " by " + data.author;
 
 					$("#packageName").text(data.name);
 					$("#descriptionList .list-group-item").html(data.description);
