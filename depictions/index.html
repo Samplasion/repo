@@ -193,12 +193,12 @@
 			}
 
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
-					var name     = tabs[0].views[0].title;
-					var version  = tabs[0].latest[5].text;
-					var author   = tabs[0].latest[8].text;
-					var versions = organizeVersions(tabs[1].views);
 
-					document.title = data.name + " by " + data.author;
+					var version  = data.tabs[0].views[5];
+					var author   = data.tabs[0].views[8];
+					var versions = organizeVersions(data.tabs[1].views);
+
+					document.title = data.tabs[0].views[0].title + " by " + author;
 
 					$("#packageName").text(data.name);
 					$("#descriptionList .list-group-item").html(data.description);
@@ -243,7 +243,7 @@
 				});
 
 				return versions;
-			}	
+			}
 		});
 	</script>
 
