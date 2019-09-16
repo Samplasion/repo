@@ -126,11 +126,7 @@
 					<h2>IN THIS VERSION (<span id="versionBadge" class="badge"></span>)</h2>
 				</label>
 				<ul id="changesList" class="list-group">
-					<li class="list-group-item">
-						<p></p>
-					</li>
-					<li class="arrow"><a id="changelog" class="link-item list-group-item"
-							href="" role="button">Full Changelog</a></li>
+					
 				</ul>
 			</article>
 
@@ -204,12 +200,13 @@
 					$("#packageAuthor").text("brought to you by " + data.author);
 					$("#license").text(data.license || "Closed Source");
 					$("#size").text(data.size || "Unknown");
-					var cList = $(".changelog-list");
+					var cList = $("#changesList");
 					var changes = data.changelog[data.version];
 					for (var c in changes) {
 						var change = changes[c];
-						cList.append("<li>" + change + "</li>")
+						cList.append("<li class=\"list-group-item\"><p>" + change + "</p></li>")
 					}
+					cList.append('<li class="arrow"><a id="changelog" class="link-item list-group-item" href="" role="button">Full Changelog</a></li>')
 
 					$("#changelog").attr("href", "changelog?p=" + dPackage);
 					$("#screenshots").attr("href", "screenshots?p=" + dPackage);
