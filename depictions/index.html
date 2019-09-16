@@ -195,8 +195,8 @@
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
 
 					var title = data.tabs[0].views[0].title;
-					var version  = data.tabs[0].views[5];
-					var author   = data.tabs[0].views[8];
+					var version  = data.tabs[0].views[5].text;
+					var author   = data.tabs[0].views[8].text;
 					var versions = organizeVersions(data.tabs[1].views);
 
 					document.title = title + " by " + author;
