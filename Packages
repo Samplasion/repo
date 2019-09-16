@@ -1,3 +1,18 @@
+Package: com.samplasion.7heaven
+Name: 7-Heaven
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Ports the iOS 7 "Free" App Store button to newer devices!
+Maintainer: Francesco Arieti
+Author: Francesco Arieti
+Section: Tweaks
+Version: 0.2.0
+Installed-Size: 152
+MD5sum: 
+Size: 7856
+Filename: debs/7-Heaven.deb
+Depiction: https://samplasion.tk/depictions/?p=com.samplasion.7heaven
+
 Package: com.jake0oo0.instamute
 Name: InstaMute
 Depends: mobilesubstrate
@@ -8,10 +23,10 @@ Author: Jake0oo0 <jaek0oo0dev@gmail.com>
 Section: Tweaks
 Version: 1.0.2-1
 Installed-Size: 192
-MD5sum: 08b8d645e3b8c191646e5e6a2153f154
+MD5sum: 
 Size: 13692
 Filename: debs/com.jake0oo0.instamute.deb
-Depiction: https://boomerang.jakes.site/depictions/?p=com.jake0oo0.instamute
+Depiction: https://samplasion.tk/depictions/?p=com.jake0oo0.instamute
 
 Package: com.jake0oo0.noalertloop
 Name: NoAlertLoop
@@ -23,9 +38,9 @@ Author: Jake0oo0 <jake0oo0dev@gmail.com>
 Section: Tweaks
 Version: 1.0.1-1
 Installed-Size: 220
-MD5sum: 8411f4752a715024f153871b8f8edf9a
+MD5sum: 
 Size: 30892
 Filename: debs/com.jake0oo0.noalertloop.deb
-Depiction: https://boomerang.jakes.site/depictions/?p=com.jake0oo0.noalertloop
+Depiction: https://samplasion.tk/depictions/?p=com.jake0oo0.noalertloop
 
 
