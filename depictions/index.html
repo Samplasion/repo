@@ -194,20 +194,21 @@
 
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
 
+					var title = data.tabs[0].views[0].title;
 					var version  = data.tabs[0].views[5];
 					var author   = data.tabs[0].views[8];
 					var versions = organizeVersions(data.tabs[1].views);
 
-					document.title = data.tabs[0].views[0].title + " by " + author;
+					document.title = title + " by " + author;
 
-					$("#packageName").text(data.name);
+					$("#packageName").text(title);
 					$("#descriptionList .list-group-item").html(data.description);
-					$("#versionBadge").text(data.version);
-					$("#packageAuthor").text("brought to you by " + data.author);
+					$("#versionBadge").text(version);
+					$("#packageAuthor").text("brought to you by " + author);
 					$("#license").text(data.license || "Closed Source");
 					$("#size").text(data.size || "Unknown");
 					var cList = $("#changesList");
-					var change = versions[versions.length-1];
+					var change = versions[0];
 					cList.append("<li class=\"list-group-item\"><p>" + change.log + "</p></li>")
 					cList.append('<li class="arrow"><a id="changelog" class="link-item list-group-item" href="" role="button">Full Changelog</a></li>')
 
