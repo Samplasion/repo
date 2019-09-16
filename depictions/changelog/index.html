@@ -56,13 +56,15 @@
 			return;
 		}
 
+		var version = tabs[0].latest[5];
+		var author  = tabs[0].latest[8]
+
 		$.getJSON("/repo/pkgs/" + dPackage + ".json", function(data) {
 			document.title = data.name + " by " + data.author;
 		  $(".package-name").text(data.name);
 		  var latest = data.version;
 		  var versions = Object.keys(data.changelog).reverse();
 		  for (var v in versions) {
-		  	var version = versions[v];
 		  	var panel = $("<div class=\"panel panel-default\"></div>");
 		  	panel.append("<div class=\"panel-heading\">" + version + "</div>");
 		  	panel.append("<div class=\"panel-body changelog-list\"></div>");

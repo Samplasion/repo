@@ -36,6 +36,7 @@ do
   wc -c "$deb" | echo "Size: $(awk '{ print $1 }')" >> Packages
   echo "Filename: $deb" >> Packages
   dpkg-deb -f "$deb" Package | echo "Depiction: https://samplasion.github.io/repo/depictions/?p=$(xargs -0)" >> Packages
+  dpkg-deb -f "$deb" Package | echo "SileoDepiction: https://samplasion.github.io/repo/pkgs/$(xargs -0).json" >> Packages
   echo "" >> Packages
 done
 

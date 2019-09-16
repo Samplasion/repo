@@ -194,6 +194,11 @@
 
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
 					document.title = data.name + " by " + data.author;
+
+					var version  = tabs[0].latest[5];
+					var author   = tabs[0].latest[8];
+					var versions = organizeVersions(tabs[1].views);
+
 					$("#packageName").text(data.name);
 					$("#descriptionList .list-group-item").html(data.description);
 					$("#versionBadge").text(data.version);
@@ -201,11 +206,8 @@
 					$("#license").text(data.license || "Closed Source");
 					$("#size").text(data.size || "Unknown");
 					var cList = $("#changesList");
-					var changes = data.changelog[data.version];
-					for (var c in changes) {
-						var change = changes[c];
-						cList.append("<li class=\"list-group-item\"><p>" + change + "</p></li>")
-					}
+					var change = versions[versions.length-1];
+					cList.append("<li class=\"list-group-item\"><p>" + change.log + "</p></li>")
 					cList.append('<li class="arrow"><a id="changelog" class="link-item list-group-item" href="" role="button">Full Changelog</a></li>')
 
 					$("#changelog").attr("href", "changelog?p=" + dPackage);
@@ -225,6 +227,22 @@
 					results = regex.exec(location.search);
 				return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
 			}
+
+			function organizeVersions(views) {
+				var title = "",
+				log = "";
+				var versions = [];
+				views.forEach((view, index) => {
+					if (index % 2 == 0) {
+						title = view.title;
+					} else {
+						log = view.markdown;
+						versions.push({title, log});
+					}
+				});
+
+				return versions;
+			}	
 		});
 	</script>
 
