@@ -193,7 +193,8 @@ readTextFile("https://samplasion.github.io/repo/Packages").then(text => {
     return false
   }
   const populateProcessedPackagesWithPackage = package => {
-    console.log(package)
+	console.log(package)
+	if (!package.Package) return;
     var metadata = {}
     package.split("\n").forEach(pm => {
       metadata[pm.split(": ")[0]] = pm.split(": ")[1]
