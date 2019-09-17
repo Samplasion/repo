@@ -7,10 +7,17 @@
         "tabname": "Details",
         "views": [
           {
-            "title": "7-Heaven",
+            "title": "7-Heaven ports the iOS 7 \\\"Free\\\" App Store button to newer devices.",
             "useBoldText": true,
             "useBottomMargin": false,
             "class": "DepictionSubheaderView"
+          },
+          {
+            "markdown": "<p><i>Supports iOS 12</i></p>\\n</p><p>Say welcome back to iOS 7.</p>\\n<p>7-Heaven brings back the \\\"Free\\\" button in the App Store for when the app is free. And that's not all! It replaces the button with its iOS 7 counterpart regardless of the text, discards the \\\"In app purchases\\\" text in favor of the little + sign and most importantly, <b>it works in every language seamlessly!</b></p>\\n<p><i>Note: this tweak is a fork of Free Market by Zachary Thomas Paul.</i></p>\\n<p><i>No options to configure</i></p>",
+            "class": "DepictionMarkdownView",
+            "useBoldText": true,
+            "title": "markdown-description",
+             "useBottomMargin": false
           },
           {
             "itemCornerRadius": 6,
