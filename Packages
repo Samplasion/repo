@@ -46,4 +46,20 @@ Filename: debs/CustomBetaAlert-0.0.1.deb
 Depiction: https://samplasion.github.io/repo/depictions/?p=com.samplasion.custombetaalert
 SileoDepiction: https://samplasion.github.io/repo/pkgs/com.samplasion.custombetaalert.json
 
+Package: com.samplasion.custombetaalert
+Name: CustomBetaAlert
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Recreate the annoying beta update message, but now with custom text!
+Maintainer: Samplasion
+Author: Samplasion
+Section: Tweaks
+Version: 1.0.0
+Installed-Size: 232
+MD5sum: 7624c337f0cc7db2edfb6f838c9dc148
+Size: 18112
+Filename: debs/CustomBetaAlert-1.0.0.deb
+Depiction: https://samplasion.github.io/repo/depictions/?p=com.samplasion.custombetaalert
+SileoDepiction: https://samplasion.github.io/repo/pkgs/com.samplasion.custombetaalert.json
+
 

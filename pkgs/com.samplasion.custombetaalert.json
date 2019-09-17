@@ -1,40 +1,31 @@
 {
     "minVersion": "0.1",
-    "headerImage": "https://samplasion.github.io/repo/images/7heaven1.png",
+    "headerImage": "https://samplasion.github.io/repo/images/en.png",
     "tintColor": "#c44040",
     "tabs": [
       {
         "tabname": "Details",
         "views": [
           {
-            "title": "7-Heaven",
+            "title": "CustomBetaAlert",
             "useBoldText": true,
             "useBottomMargin": false,
             "class": "DepictionHeaderView"
           },
           {
-            "markdown": "<i>Supports iOS 12</i><br><p>Say welcome back to iOS 7.</p><p>7-Heaven brings back the \"Free\" button in the App Store for when the app is free. And that's not all! It replaces the button with its iOS 7 counterpart regardless of the text, discards the \"In app purchases\" text in favor of the little + sign. Most importantly, though, <b>it works in every language seamlessly!</b></p><p><i>Note: this tweak is a fork of Free Market by Zachary Thomas Paul.</i></p><p><i>No options to configure</i></p>",
+            "markdown": "<i>Supports iOS 12</i><br><p>Recreate the annoying beta update message, but now with custom text!</p><p>Supports placeholders: \"%iOS\" for the current iOS version; \"%batt\" for the current battery percentage and \"%model\" for the current device model.</p><br><p><i>Configure from settings</i></p>",
             "class": "DepictionMarkdownView",
             "useBoldText": true,
             "title": "markdown-description",
              "useBottomMargin": false
           },
           {
-            "itemCornerRadius": 6,
-            "itemSize": "{160, 275.41333333333336}",
-            "screenshots": [
-              {
-                "accessibilityText": "Screenshot",
-                "url": "https://samplasion.github.io/repo/images/7heaven1.png",
-                "fullSizeURL": "Screenshot URL 1"
-              },
-              {
-                "accessibilityText": "Screenshot",
-                "url": "https://samplasion.github.io/repo/images/7heaven2.png",
-                "fullSizeURL": "Screenshot URL 2"
-              }
-            ],
-            "class": "DepictionScreenshotsView"
+            "cornerRadius": 6,
+            "width": 160,
+            "height": 275.41333333333336,
+            "URL": "https://samplasion.github.io/repo/images/custombetaalert1.mp4",
+            "alignment": 1,
+            "class": "DepictionVideoView"
           },
           {
             "class": "DepictionSeparatorView"
@@ -70,7 +61,7 @@
           },
           {
             "title": "Size",
-            "text": "8 KB",
+            "text": "18 KB",
             "class": "DepictionTableTextView"
           },
           {
@@ -93,18 +84,18 @@
         "tabname": "Changelog",
         "views": [
             {
-              "title": "Version 0.2.0",
+              "title": "Version 1.0.0",
               "useBoldText": true,
               "useBottomMargin": true,
               "class": "DepictionSubheaderView"
             },
             {
-              "markdown": "Move away from <code>layoutSubviews</code> (thanks to <i>Muirey03</i>)",
+              "markdown": "<ul><li>Added placeholders</li><li>Added conditions</li></ul>",
               "useSpacing": false,
               "class": "DepictionMarkdownView"
             },
             {
-              "title": "Version 0.1.0",
+              "title": "Version 0.0.1",
               "useBoldText": true,
               "useBottomMargin": true,
               "class": "DepictionSubheaderView"
