@@ -25,16 +25,16 @@
             "screenshots": [
               {
                 "accessibilityText": "Screenshot",
-                "url": "https://samplasion.github.io/repo/images/en.png",
+                "url": "https://samplasion.github.io/repo/images/7heaven1.png",
                 "fullSizeURL": "Screenshot URL 1"
+              },
+              {
+                "accessibilityText": "Screenshot",
+                "url": "https://samplasion.github.io/repo/images/7heaven2.png",
+                "fullSizeURL": "Screenshot URL 2"
               }
             ],
             "class": "DepictionScreenshotsView"
-          },
-          {
-            "markdown": "Ports the iOS 7 \"Free\" App Store button to newer devices!",
-            "useSpacing": true,
-            "class": "DepictionMarkdownView"
           },
           {
             "class": "DepictionSeparatorView"
