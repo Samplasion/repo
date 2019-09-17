@@ -199,8 +199,8 @@
 					var author      = data.tabs[0].views[8].text;
 					var versions    = organizeVersions(data.tabs[1].views);
 					var description = data.tabs[0].views.filter(v => v.class == "DepictionMarkdownView")[0].markdown;
-					var license     = data.tabs[0].views.filter(v => v.title.toLowerCase() == "license")[0].text;
-					var size        = data.tabs[0].views.filter(v => v.title.toLowerCase() == "size")[0].text;
+					var license     = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "license")[0].text;
+					var size        = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "size")[0].text;
 
 					document.title  = title + " by " + author;
 
