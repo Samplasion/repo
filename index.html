@@ -159,7 +159,7 @@ function readTextFile(file) {
     setTimeout(() => rej(""), 10000)
   })
 }
-readTextFile("https://samplasion.github.io/cydia/Packages").then(text => {
+readTextFile("https://samplasion.github.io/repo/Packages").then(text => {
   var packages = text.split("\n\n")
   const sort = (a, b) => {
     var metadataA = a
