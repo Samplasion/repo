@@ -84,6 +84,11 @@
             "class": "DepictionTableButtonView"
           },
           {
+            "title": "Original Project",
+            "action": "https://github.com/LacertosusRepo/Open-Source-Tweaks/tree/master/Free%20Market",
+            "class": "DepictionTableButtonView"
+          },
+          {
             "spacing": 16,
             "class": "DepictionSpacerView"
           },
