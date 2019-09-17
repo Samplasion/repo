@@ -13,7 +13,7 @@
             "class": "DepictionSubheaderView"
           },
           {
-            "markdown": "<p><i>Supports iOS 12</i></p><br><p>Say welcome back to iOS 7.</p><br><p>7-Heaven brings back the \"Free\" button in the App Store for when the app is free. And that's not all! It replaces the button with its iOS 7 counterpart regardless of the text, discards the \"In app purchases\" text in favor of the little + sign. Most importantly, though, <b>it works in every language seamlessly!</b></p><br><p><i>Note: this tweak is a fork of Free Market by Zachary Thomas Paul.</i></p><br><p><i>No options to configure</i></p>",
+            "markdown": "<p><i>Supports iOS 12</i></p><p>Say welcome back to iOS 7.</p><p>7-Heaven brings back the \"Free\" button in the App Store for when the app is free. And that's not all! It replaces the button with its iOS 7 counterpart regardless of the text, discards the \"In app purchases\" text in favor of the little + sign. Most importantly, though, <b>it works in every language seamlessly!</b></p><p><i>Note: this tweak is a fork of Free Market by Zachary Thomas Paul.</i></p><p><i>No options to configure</i></p>",
             "class": "DepictionMarkdownView",
             "useBoldText": true,
             "title": "markdown-description",
@@ -61,6 +61,16 @@
           {
             "title": "Developer",
             "text": "Francesco Arieti",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "License",
+            "text": "Open Source",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "Size",
+            "text": "8 KB",
             "class": "DepictionTableTextView"
           },
           {

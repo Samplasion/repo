@@ -115,7 +115,7 @@
 					<h2>DESCRIPTION</h2>
 				</header>
 				<ul id="descriptionList" class="list-group">
-					<li class="list-group-item"></li>
+					<li id="desc" class="list-group-item"></li>
 					<li class="arrow"><a id="screenshots" href="" role="button">Screenshots</a>
 					</li>
 				</ul>
@@ -194,19 +194,22 @@
 
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
 
-					var title = data.tabs[0].views[0].title;
-					var version  = data.tabs[0].views[5].text;
-					var author   = data.tabs[0].views[8].text;
-					var versions = organizeVersions(data.tabs[1].views);
+					var title       = data.tabs[0].views[0].title;
+					var version     = data.tabs[0].views[5].text;
+					var author      = data.tabs[0].views[8].text;
+					var versions    = organizeVersions(data.tabs[1].views);
+					var description = data.tabs[0].views.filter(v => v.class == "DepictionMarkdownView")[0].markdown;
+					var license     = data.tabs[0].views.filter(v => v.title.toLowerCase() == "license")[0].text;
+					var size        = data.tabs[0].views.filter(v => v.title.toLowerCase() == "size")[0].text;
 
-					document.title = title + " by " + author;
+					document.title  = title + " by " + author;
 
 					$("#packageName").text(title);
-					$("#descriptionList .list-group-item").html(data.description);
+					$("#desc").html(description);
 					$("#versionBadge").text(version);
 					$("#packageAuthor").text("brought to you by " + author);
-					$("#license").text(data.license || "Closed Source");
-					$("#size").text(data.size || "Unknown");
+					$("#license").text(license || "Closed Source");
+					$("#size").text(size || "Unknown");
 					var cList = $("#changesList");
 					var change = versions[0];
 					cList.append("<li class=\"list-group-item\"><p>" + change.log + "</p></li>")
