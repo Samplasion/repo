@@ -20,6 +20,11 @@
              "useBottomMargin": false
           },
           {
+            "adUnitID": "ca-app-pub-2629383633762978/9054838145",
+            "adSize": "Banner",
+            "class": "DepictionAdmobView"
+          },
+          {
             "itemCornerRadius": 6,
             "itemSize": "{160, 275.41333333333336}",
             "screenshots": [
