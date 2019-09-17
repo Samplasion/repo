@@ -30,4 +30,20 @@ Filename: debs/7-Heaven.deb
 Depiction: https://samplasion.github.io/repo/depictions/?p=com.samplasion.7heaven
 SileoDepiction: https://samplasion.github.io/repo/pkgs/com.samplasion.7heaven.json
 
+Package: com.samplasion.custombetaalert
+Name: CustomBetaAlert
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Samplasion
+Author: Samplasion
+Section: Tweaks
+Version: 0.0.1
+Installed-Size: 220
+MD5sum: 71cef1a9681156c51fec3c218c5c0e56
+Size: 8548
+Filename: debs/CustomBetaAlert-0.0.1.deb
+Depiction: https://samplasion.github.io/repo/depictions/?p=com.samplasion.custombetaalert
+SileoDepiction: https://samplasion.github.io/repo/pkgs/com.samplasion.custombetaalert.json
+
 
