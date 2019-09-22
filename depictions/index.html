@@ -196,39 +196,40 @@
 
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
 
-					var title       = data.tabs[0].views[0].title;
-					var version     = data.tabs[0].views[5].text;
-					var price       = data.tabs[0].views[8].text;
-					var author      = data.tabs[0].views[9].text;
-					var versions    = organizeVersions(data.tabs[1].views);
-					var description = data.tabs[0].views.filter(v => v.class == "DepictionMarkdownView")[0].markdown;
-					var license     = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "license")[0].text;
-					var size        = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "size")[0].text;
+				var title       = data.tabs[0].views[0].title;
+				var version     = data.tabs[0].views[5].text;
+				var price       = data.tabs[0].views[8].text;
+				var author      = data.tabs[0].views[9].text;
+				var versions    = organizeVersions(data.tabs[1].views);
+				var description = data.tabs[0].views.filter(v => v.class == "DepictionMarkdownView")[0].markdown;
+				var license     = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "license")[0].text;
+				var size        = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "size")[0].text;
 
-					document.title  = title + " by " + author;
+				document.title  = title + " by " + author;
 
-					$("#packageName").text(title);
-					$("#desc").html(description);
-					$("#packageAuthor").text("brought to you by " + author);
-					$("#license").text(license || "Closed Source");
-					$("#size").text(size || "Unknown");
-					$("#price").text(price || "Free");
-					$("#versionBadge").text(version);
-					var cList = $("#changesList");
-					var change = versions[0];
-					cList.append("<li class=\"list-group-item\"><p>" + change.log + "</p></li>")
-					cList.append('<li class="arrow"><a id="changelog" class="link-item list-group-item" href="" role="button">Full Changelog</a></li>')
+				$("#packageName").text(title);
+				$("#desc").html(description);
+				$("#packageAuthor").text("brought to you by " + author);
+				$("#license").text(license || "Closed Source");
+				$("#size").text(size || "Unknown");
+				$("#price").text(price || "Free");
+				console.log(version);
+				$("#versionBadge").text(version);
+				var cList = $("#changesList");
+				var change = versions[0];
+				cList.append("<li class=\"list-group-item\"><p>" + change.log + "</p></li>")
+				cList.append('<li class="arrow"><a id="changelog" class="link-item list-group-item" href="" role="button">Full Changelog</a></li>')
 
-					$("#changelog").attr("href", "changelog?p=" + dPackage);
-					$("#screenshots").attr("href", "screenshots?p=" + dPackage);
-				})
-				.fail(function () {
-					$("#packageError").css("display", "block");
-					$("#packageError article ul li").text("An error occurred while retrieving package info!")
-					$("#packageInformation").css("display", "none");
-					$("#packageName").text("Not found");
-					return;
-				});
+				$("#changelog").attr("href", "changelog?p=" + dPackage);
+				$("#screenshots").attr("href", "screenshots?p=" + dPackage);
+			})
+			.fail(function () {
+				$("#packageError").css("display", "block");
+				$("#packageError article ul li").text("An error occurred while retrieving package info!")
+				$("#packageInformation").css("display", "none");
+				$("#packageName").text("Not found");
+				return;
+			});
 
 			function getParameterByName(name) {
 				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
