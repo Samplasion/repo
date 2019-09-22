@@ -197,7 +197,7 @@
 			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
 
 				var title       = data.tabs[0].views[0].title;
-				var version     = data.tabs[0].views[5].text;
+				var version     = data.tabs[0].views[6].text;
 				var price       = data.tabs[0].views[8].text;
 				var author      = data.tabs[0].views[9].text;
 				var versions    = organizeVersions(data.tabs[1].views);
