@@ -140,9 +140,11 @@
 					<li id="metadata">
 						<dl>
 							<dt>License</dt>
-							<dd id="license">Open Source, Fork</dd>
+							<dd id="license">Closed Source</dd>
+							<dt>Price</dt>
+							<dd id="price">Free</dd>
 							<dt id="sizeLabel">Size</dt>
-							<dd id="size">8 KB</dd>
+							<dd id="size">Unknown</dd>
 						</dl>
 					</li>
 				</ul>
@@ -196,7 +198,8 @@
 
 					var title       = data.tabs[0].views[0].title;
 					var version     = data.tabs[0].views[5].text;
-					var author      = data.tabs[0].views[8].text;
+					var price       = data.tabs[0].views[8].text;
+					var author      = data.tabs[0].views[9].text;
 					var versions    = organizeVersions(data.tabs[1].views);
 					var description = data.tabs[0].views.filter(v => v.class == "DepictionMarkdownView")[0].markdown;
 					var license     = data.tabs[0].views.filter(v => v.title && v.title.toLowerCase() == "license")[0].text;
@@ -206,10 +209,11 @@
 
 					$("#packageName").text(title);
 					$("#desc").html(description);
-					$("#versionBadge").text(version);
 					$("#packageAuthor").text("brought to you by " + author);
 					$("#license").text(license || "Closed Source");
 					$("#size").text(size || "Unknown");
+					$("#price").text(price || "Free");
+					$("#versionBadge").text(version);
 					var cList = $("#changesList");
 					var change = versions[0];
 					cList.append("<li class=\"list-group-item\"><p>" + change.log + "</p></li>")
