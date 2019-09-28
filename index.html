@@ -40,7 +40,7 @@
         <li><a href="zbra://sources/add/https://samplasion.github.io/cydia/" role="button">Add to Sileo</a></li>
       </ul>
     </section>
-    <p role="footer">Psst: removing "/cydia" from the URL will take you to my awesome blog!</p>
+    <p role="footer">Psst: removing "repo." from the URL will take you to my awesome blog!</p>
   </article>
 
   <article id="compatCheckContainer">
@@ -159,7 +159,7 @@ function readTextFile(file) {
     setTimeout(() => rej(""), 10000)
   })
 }
-readTextFile("https://samplasion.github.io/repo/Packages").then(text => {
+readTextFile("http://repo.samplasion.tk/repo/Packages").then(text => {
   var packages = text.split("\n\n")
   const sort = (a, b) => {
     var metadataA = a
