@@ -266,8 +266,9 @@
 				$("#screenshots").attr("href", "screenshots?p=" + dPackage);
 			})
 			.fail(function (e) {
+				console.log(e);
 				$("#packageError").css("display", "block");
-				$("#packageError article ul li").html("An error occurred while retrieving package info!<br><code>" + e + "</code>")
+				$("#packageError article ul li").html("An error occurred while retrieving package info!<br><code>" + e.name + "</code>")
 				$("#packageInformation").css("display", "none");
 				$("#packageName").text("Not found");
 				return;
