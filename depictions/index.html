@@ -237,7 +237,7 @@
 				return;
 			}
 
-			$.getJSON("/repo/pkgs/" + dPackage + ".json", function (data) {
+			$.getJSON("/pkgs/" + dPackage + ".json", function (data) {
 
 				var title       = data.tabs[0].views[0].title;
 				var version     = data.tabs[0].views[6].text;

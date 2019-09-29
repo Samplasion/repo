@@ -63,7 +63,7 @@
 			return;
 		}
 
-		$.getJSON("/repo/pkgs/" + dPackage + ".json", function(data) {
+		$.getJSON("/pkgs/" + dPackage + ".json", function(data) {
 			document.title = data.name + " by " + data.author;
 		  $(".package-name").text(data.name);
 		  

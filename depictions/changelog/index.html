@@ -62,7 +62,7 @@
 		var version = tabs[0].latest[5];
 		var author  = tabs[0].latest[8]
 
-		$.getJSON("/repo/pkgs/" + dPackage + ".json", function(data) {
+		$.getJSON("/pkgs/" + dPackage + ".json", function(data) {
 			document.title = data.name + " by " + data.author;
 		  $(".package-name").text(data.name);
 		  var latest = data.version;
