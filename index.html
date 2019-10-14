@@ -161,7 +161,7 @@ function readTextFile(file) {
     setTimeout(() => rej(""), 10000)
   })
 }
-readTextFile("http://repo.samplasion.tk/Packages").then(text => {
+readTextFile("https://repo.samplasion.tk/Packages").then(text => {
   var packages = text.split("\n\n")
   const sort = (a, b) => {
     var metadataA = a
