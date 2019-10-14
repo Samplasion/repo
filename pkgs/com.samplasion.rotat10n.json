@@ -1,0 +1,112 @@
+{
+    "minVersion": "0.1",
+    "headerImage": "https://cdn.discordapp.com/attachments/623564273947508738/633381207693852688/image0.png",
+    "tintColor": "#c44040",
+    "tabs": [
+      {
+        "tabname": "Details",
+        "views": [
+          {
+            "title": "Rotat10n",
+            "useBoldText": true,
+            "useBottomMargin": false,
+            "class": "DepictionHeaderView"
+          },
+          {
+            "markdown": "<i>Supports iOS 10 - 12</i><br><p>Enables rotation on smaller devices, such as the iPhone 5s and iPhone 6</p>",
+            "class": "DepictionMarkdownView",
+            "useBoldText": true,
+            "title": "markdown-description",
+             "useBottomMargin": false
+          },
+          {
+            "adUnitID": "ca-app-pub-2629383633762978/9054838145",
+            "adSize": "Banner",
+            "class": "DepictionAdmobView"
+          },
+          {
+            "itemCornerRadius": 6,
+            "itemSize": "{160, 275.41333333333336}",
+            "screenshots": [
+              {
+                "accessibilityText": "Screenshot",
+                "url": "https://cdn.discordapp.com/attachments/623564273947508738/633381207693852688/image0.png",
+                "fullSizeURL": "Screenshot URL 1"
+              }
+            ],
+            "class": "DepictionScreenshotsView"
+          },
+          {
+            "class": "DepictionSeparatorView"
+          },
+          {
+            "title": "Latest Version",
+            "class": "DepictionHeaderView"
+          },
+          {
+            "title": "Version",
+            "text": "1.0.0",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "Released",
+            "text": "2019/10/14",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "Price",
+            "text": "Free",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "Developer",
+            "text": "Francesco Arieti",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "License",
+            "text": "Closed Source (come on, you really want to see the source of a tweak like this?)",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "Size",
+            "text": "200 B",
+            "class": "DepictionTableTextView"
+          },
+          {
+            "title": "Contact Support",
+            "action": "https://invite.gg/samplasion",
+            "class": "DepictionTableButtonView"
+          },
+          {
+            "spacing": 16,
+            "class": "DepictionSpacerView"
+          },
+          {
+            "spacing": 20,
+            "class": "DepictionSpacerView"
+          }
+        ],
+        "class": "DepictionStackView"
+      },
+      {
+        "tabname": "Changelog",
+        "views": [
+            {
+              "title": "Version 1.0.0",
+              "useBoldText": true,
+              "useBottomMargin": true,
+              "class": "DepictionSubheaderView"
+            },
+            {
+              "markdown": "Initial release",
+              "useSpacing": false,
+              "class": "DepictionMarkdownView"
+            }
+        ],
+        "class": "DepictionStackView"
+      }
+    ],
+    "class": "DepictionTabView"
+  }
+  
