@@ -1,31 +1,81 @@
+Package: com.samplasion.7heaven
+Name: 7-Heaven
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Ports the iOS 7 "Free" App Store button to newer devices!
+Maintainer: Francesco Arieti
+Author: Francesco Arieti
+Section: Tweaks
+Version: 0.1.0
+Installed-Size: 152
 MD5sum: f469cddd78bec7527b73ab419b67d70d
 Size: 7434
 Filename: debs/7-Heaven-0.1.0.deb
-Depiction: http://repo.samplasion.tk/depictions/?p=
-SileoDepiction: http://repo.samplasion.tk/repo/pkgs/.json
+Depiction: http://repo.samplasion.tk/depictions/?p=com.samplasion.7heaven
+SileoDepiction: http://repo.samplasion.tk/repo/pkgs/com.samplasion.7heaven.json
 
+Package: com.samplasion.7heaven
+Name: 7-Heaven
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Ports the iOS 7 "Free" App Store button to newer devices!
+Maintainer: Francesco Arieti
+Author: Francesco Arieti
+Section: Tweaks
+Version: 0.2.0
+Installed-Size: 152
 MD5sum: 06f3394f4a2a9bd7c6a3805f54dbd84c
 Size: 7856
 Filename: debs/7-Heaven.deb
-Depiction: http://repo.samplasion.tk/depictions/?p=
-SileoDepiction: http://repo.samplasion.tk/repo/pkgs/.json
+Depiction: http://repo.samplasion.tk/depictions/?p=com.samplasion.7heaven
+SileoDepiction: http://repo.samplasion.tk/repo/pkgs/com.samplasion.7heaven.json
 
+Package: com.samplasion.custombetaalert
+Name: CustomBetaAlert
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Samplasion
+Author: Samplasion
+Section: Tweaks
+Version: 0.0.1
+Installed-Size: 220
 MD5sum: 71cef1a9681156c51fec3c218c5c0e56
 Size: 8548
 Filename: debs/CustomBetaAlert-0.0.1.deb
-Depiction: http://repo.samplasion.tk/depictions/?p=
-SileoDepiction: http://repo.samplasion.tk/repo/pkgs/.json
+Depiction: http://repo.samplasion.tk/depictions/?p=com.samplasion.custombetaalert
+SileoDepiction: http://repo.samplasion.tk/repo/pkgs/com.samplasion.custombetaalert.json
 
+Package: com.samplasion.custombetaalert
+Name: CustomBetaAlert
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Recreate the annoying beta update message, but now with custom text!
+Maintainer: Samplasion
+Author: Samplasion
+Section: Tweaks
+Version: 1.0.0
+Installed-Size: 232
 MD5sum: 7624c337f0cc7db2edfb6f838c9dc148
 Size: 18112
 Filename: debs/CustomBetaAlert-1.0.0.deb
-Depiction: http://repo.samplasion.tk/depictions/?p=
-SileoDepiction: http://repo.samplasion.tk/repo/pkgs/.json
+Depiction: http://repo.samplasion.tk/depictions/?p=com.samplasion.custombetaalert
+SileoDepiction: http://repo.samplasion.tk/repo/pkgs/com.samplasion.custombetaalert.json
 
+Package: com.samplasion.rotat10n
+Name: Rotat10n
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Francesco Arieti <samplasion@gmail.com>
+Author: Francesco Arieti <samplasion@gmail.com>
+Section: Tweaks
+Version: 1.0.0
+Installed-Size: 200
 MD5sum: d013da9133b856e93ef8ffd933610baf
 Size: 3068
 Filename: debs/Rotat10n.deb
-Depiction: http://repo.samplasion.tk/depictions/?p=
-SileoDepiction: http://repo.samplasion.tk/repo/pkgs/.json
+Depiction: http://repo.samplasion.tk/depictions/?p=com.samplasion.rotat10n
+SileoDepiction: http://repo.samplasion.tk/repo/pkgs/com.samplasion.rotat10n.json
 
 
