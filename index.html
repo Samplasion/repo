@@ -172,7 +172,7 @@ readTextFile("https://repo.samplasion.tk/Packages").then(text => {
     // b.split("\n").forEach(pm => {
     //   metadataB[pm.split(": ")[0]] = pm.split(": ")[1]
     // })
-    return metadataA.Name.localeCompare(metadataB.Name)
+    return (metadataA.Name || "").localeCompare(metadataB.Name || "")
   }
   var processedPackages = {}
   const isHigher = (verA, /* > */ verB) => {
