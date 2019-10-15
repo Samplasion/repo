@@ -62,18 +62,50 @@ Filename: debs/CustomBetaAlert-1.0.0.deb
 Depiction: https://repo.samplasion.tk/depictions/?p=com.samplasion.custombetaalert
 SileoDepiction: https://repo.samplasion.tk/repo/pkgs/com.samplasion.custombetaalert.json
 
+Package: com.samplasion.custombetaalert
+Name: CustomBetaAlert
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Recreate the annoying beta update message, but now with custom text!
+Maintainer: Samplasion
+Author: Samplasion
+Section: Tweaks
+Version: 1.1.0
+Installed-Size: 236
+MD5sum: dc48374eab8e4e58778728d8ccac2e95
+Size: 18234
+Filename: debs/CustomBetaAlert-1.1.0.deb
+Depiction: https://repo.samplasion.tk/depictions/?p=com.samplasion.custombetaalert
+SileoDepiction: https://repo.samplasion.tk/repo/pkgs/com.samplasion.custombetaalert.json
+
+Package: com.samplasion.custombetaalert
+Name: CustomBetaAlert
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Recreate the annoying beta update message, but now with custom text!
+Maintainer: Samplasion
+Author: Samplasion
+Section: Tweaks
+Version: 1.1.1
+Installed-Size: 236
+MD5sum: cea69d9c417a040a177a7534533f2dcb
+Size: 18308
+Filename: debs/CustomBetaAlert-1.1.1.deb
+Depiction: https://repo.samplasion.tk/depictions/?p=com.samplasion.custombetaalert
+SileoDepiction: https://repo.samplasion.tk/repo/pkgs/com.samplasion.custombetaalert.json
+
 Package: com.samplasion.rotat10n
 Name: Rotat10n
 Depends: mobilesubstrate
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Enables rotation on smaller devices, such as the iPhone 5s and iPhone 6.
 Maintainer: Francesco Arieti <samplasion@gmail.com>
 Author: Francesco Arieti <samplasion@gmail.com>
 Section: Tweaks
 Version: 1.0.0
 Installed-Size: 200
-MD5sum: d013da9133b856e93ef8ffd933610baf
-Size: 3068
+MD5sum: ebf9d260ef8347bec8a0e617340ce81b
+Size: 3086
 Filename: debs/Rotat10n.deb
 Depiction: https://repo.samplasion.tk/depictions/?p=com.samplasion.rotat10n
 SileoDepiction: https://repo.samplasion.tk/repo/pkgs/com.samplasion.rotat10n.json
