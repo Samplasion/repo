@@ -30,6 +30,22 @@ Filename: debs/7-Heaven.deb
 Depiction: https://repo.samplasion.tk/depictions/?p=com.samplasion.7heaven
 SileoDepiction: https://repo.samplasion.tk/repo/pkgs/com.samplasion.7heaven.json
 
+Package: com.samplasion.batterybolt
+Name: BatteryBolt
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Moves the charging bolt inside the battery
+Maintainer: Francesco Arieti <admin@samplasion.tk>
+Author: Francesco Arieti <admin@samplasion.tk>
+Section: Tweaks
+Version: 1.0.0
+Installed-Size: 200
+MD5sum: de38a65b17b2fbe6d9d3df62b2166a7f
+Size: 2950
+Filename: debs/BatteryBolt.deb
+Depiction: https://repo.samplasion.tk/depictions/?p=com.samplasion.batterybolt
+SileoDepiction: https://repo.samplasion.tk/repo/pkgs/com.samplasion.batterybolt.json
+
 Package: com.samplasion.custombetaalert
 Name: CustomBetaAlert
 Depends: mobilesubstrate
