@@ -56,6 +56,11 @@
 
   <article class="panel panel-default">
     <header><h2>Hosted Packages</h2></header>
+    <section id="packerror" class="content">
+      <ul>
+        <li>Sorry, there has been a problem loading the packages.</li>
+      </ul>
+    </section>
   </article>
 
   <div id="tweakslist">
@@ -232,6 +237,7 @@ readTextFile("https://repo.samplasion.tk/Packages").then(text => {
     div.addClass("panel")
     div.addClass("panel-default")
     $("#tweakslist").append(div)
+    $("#packerror").hide()
   })
 })
 </script>
