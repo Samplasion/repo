@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="https://repo.samplasion.tk/favicon.png" type="image.png" /> 
+  <link rel="icon" href="https://repo.samplasion.js.org/favicon.png" type="image.png" /> 
 
   <link rel="stylesheet" href="depictions/ios7.min.css">
   <link rel="stylesheet" href="depictions/common.css">
@@ -37,9 +37,9 @@
     <section class="content">
       <ul>
         <li><h3 class="panel-heading">Samplasion's repo</h3> is my Cydia repository</li>
-        <li><a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://samplasion.github.io/cydia/" role="button">Add to Cydia</a></li>
-        <li><a href="sileo://source/https://samplasion.github.io/cydia/" role="button">Add to Zebra</a></li>
-        <li><a href="zbra://sources/add/https://samplasion.github.io/cydia/" role="button">Add to Sileo</a></li>
+        <li><a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.samplasion.js.org" role="button">Add to Cydia</a></li>
+        <li><a href="sileo://source/https://repo.samplasion.js.org" role="button">Add to Zebra</a></li>
+        <li><a href="zbra://sources/add/https://repo.samplasion.js.org" role="button">Add to Sileo</a></li>
       </ul>
     </section>
     <p role="footer">Psst: removing "repo." from the URL will take you to my awesome blog!</p>
@@ -166,7 +166,7 @@ function readTextFile(file) {
     setTimeout(() => rej(""), 10000)
   })
 }
-readTextFile("https://repo.samplasion.tk/Packages").then(text => {
+readTextFile("https://repo.samplasion.js.org/Packages").then(text => {
   var packages = text.split("\n\n")
   const sort = (a, b) => {
     var metadataA = a
