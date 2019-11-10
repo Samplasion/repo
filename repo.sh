@@ -35,8 +35,8 @@ do
   md5 "$deb" | echo "MD5sum: $(awk '{ print $4 }')" >> Packages
   wc -c "$deb" | echo "Size: $(awk '{ print $1 }')" >> Packages
   echo "Filename: $deb" >> Packages
-  dpkg-deb -f "$deb" Package | echo "Depiction: https://repo.samplasion.tk/depictions/?p=$(xargs -0)" >> Packages
-  dpkg-deb -f "$deb" Package | echo "SileoDepiction: https://repo.samplasion.tk/repo/pkgs/$(xargs -0).json" >> Packages
+  dpkg-deb -f "$deb" Package | echo "Depiction: https://repo.samplasion.js.org/depictions/?p=$(xargs -0)" >> Packages
+  dpkg-deb -f "$deb" Package | echo "SileoDepiction: https://repo.samplasion.js.org/repo/pkgs/$(xargs -0).json" >> Packages
   echo "" >> Packages
 done
 
