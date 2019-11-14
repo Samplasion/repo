@@ -1,0 +1,100 @@
+{
+  "minVersion": "0.1",
+  "tintColor": "#c44040",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "title": "Rotat10n",
+          "useBoldText": true,
+          "useBottomMargin": false,
+          "class": "DepictionHeaderView"
+        },
+        {
+          "markdown": "<i>Supports iOS 11 - 12</i><br><p>Drag multiple apps and folders without opening them</p>",
+          "class": "DepictionMarkdownView",
+          "useBoldText": true,
+          "title": "markdown-description",
+          "useBottomMargin": false
+        },
+        {
+          "adUnitID": "ca-app-pub-2629383633762978/9054838145",
+          "adSize": "Banner",
+          "class": "DepictionAdmobView"
+        },
+        {
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "title": "Latest Version",
+          "class": "DepictionHeaderView"
+        },
+        {
+          "title": "Version",
+          "text": "1.0.0",
+          "class": "DepictionTableTextView"
+        },
+        {
+          "title": "Released",
+          "text": "2019/03/19",
+          "class": "DepictionTableTextView"
+        },
+        {
+          "title": "Price",
+          "text": "Free",
+          "class": "DepictionTableTextView"
+        },
+        {
+          "title": "Developer",
+          "text": "Francesco Arieti",
+          "class": "DepictionTableTextView"
+        },
+        {
+          "title": "License",
+          "text": "Closed Source",
+          "class": "DepictionTableTextView"
+        },
+        {
+          "title": "Size",
+          "text": "200 B",
+          "class": "DepictionTableTextView"
+        },
+        {
+          "title": "Contact Support",
+          "action": "https://invite.gg/samplasion",
+          "class": "DepictionTableButtonView"
+        },
+        {
+          "spacing": 16,
+          "class": "DepictionSpacerView"
+        },
+        {
+          "spacing": 20,
+          "class": "DepictionSpacerView"
+        }
+      ],
+      "class": "DepictionStackView"
+    },
+    {
+      "tabname": "Changelog",
+      "views": [
+        {
+          "title": "Version 1.0.0",
+          "useBoldText": true,
+          "useBottomMargin": true,
+          "class": "DepictionSubheaderView"
+        },
+        {
+          "markdown": "Initial release",
+          "useSpacing": false,
+          "class": "DepictionMarkdownView"
+        }
+      ],
+      "class": "DepictionStackView"
+    }
+  ],
+  "class": "DepictionTabView"
+}
