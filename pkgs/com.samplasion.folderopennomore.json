@@ -6,7 +6,7 @@
       "tabname": "Details",
       "views": [
         {
-          "title": "Rotat10n",
+          "title": "FolderOpenNoMore",
           "useBoldText": true,
           "useBottomMargin": false,
           "class": "DepictionHeaderView"
