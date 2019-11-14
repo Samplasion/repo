@@ -110,6 +110,22 @@ Filename: debs/CustomBetaAlert-1.1.1.deb
 Depiction: https://repo.samplasion.js.org/depictions/?p=com.samplasion.custombetaalert
 SileoDepiction: https://repo.samplasion.js.org/repo/pkgs/com.samplasion.custombetaalert.json
 
+Package: com.samplasion.folderopennomore
+Name: FolderOpenNoMore
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Drag multiple apps and folders without opening them
+Maintainer: Francesco Arieti
+Author: Francesco Arieti
+Section: Tweaks
+Version: 1.0.0
+Installed-Size: 132
+MD5sum: 4ecf158b5844f00a052eed0ba50eca50
+Size: 6372
+Filename: debs/FolderOpenNoMore.deb
+Depiction: https://repo.samplasion.js.org/depictions/?p=com.samplasion.folderopennomore
+SileoDepiction: https://repo.samplasion.js.org/repo/pkgs/com.samplasion.folderopennomore.json
+
 Package: com.samplasion.rotat10n
 Name: Rotat10n
 Depends: mobilesubstrate
